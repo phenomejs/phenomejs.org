@@ -1,2 +1,1 @@
-# phenomejs.org
-Phenome.js website
+# Phenome.js website
