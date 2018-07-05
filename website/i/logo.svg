@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="260px" height="300px" viewBox="0 0 260 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shifted + Poly Lines</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="130 0 260 75 260 225 130 300 8.53282643e-14 225 0 75"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-20.000000, 0.000000)">
+            <g id="Shifted-+-Poly-Lines" transform="translate(150.000000, 150.000000) rotate(-360.000000) translate(-150.000000, -150.000000) translate(20.000000, 0.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#F61813" xlink:href="#path-1"></use>
+                <g id="Waves" mask="url(#mask-2)" stroke="#FFFFFF">
+                    <g transform="translate(-216.000000, 75.000000)">
+                        <path d="M259,0 C311,0 324,150 389,150 C454,150 467,0 519,0" id="Path-2" stroke-width="3"></path>
+                        <path d="M0,0 C52,0 65,150 130,150 C195,150 208,0 260,0" id="Path-2-Copy" stroke-width="3"></path>
+                        <path d="M216,0 C268,0 281,150 346,150 C411,150 424,0 476,0" id="Path-2" stroke-width="8" transform="translate(346.000000, 75.000000) scale(1, -1) translate(-346.000000, -75.000000) "></path>
+                    </g>
+                </g>
+                <g id="Lines-33" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(22.000000, 75.000000)">
+                        <polygon id="L-Copy-3" points="211.792767 92.7743464 214 91.5 219.291651 137.762794 211 137.5"></polygon>
+                        <polygon id="L-Copy-2" points="177.133975 76.5980762 183.729473 90.1672956 178.248711 140.674337 176.51666 141.674337"></polygon>
+                        <polygon id="L-Copy" points="143 19.0980762 150.461524 28.5455173 144 149.633975 141.571797 149.148058"></polygon>
+                        <polygon id="L-Copy-4" points="68.9378222 21.3423234 76.7320508 16.8423234 74.6339746 59.7320508 73.2320508 56.5"></polygon>
+                        <polygon id="L-Copy-3" points="36.5 6.5 38.1339746 6.1339746 41.966679 64.626933 34.4403996 73.5910347"></polygon>
+                        <polygon id="L-Copy-2" points="0.633974596 8.8660254 4 7.5 7.90707856 131.633975 0.978875335 135.633975"></polygon>
+                        <polygon id="L" points="104.444864 0.84232335 113.007042 1.67245037 109.5 122.5 106.5 122.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

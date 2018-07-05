@@ -1,9 +1,9 @@
 ---
-id: doc1
-title: Section 1
+title: Getting Started
 ---
+# Getting Started
 
-Check the [documentation](https://docusaurus.io) for how to use Docusaurus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies.
 
 ## Lorem
 
@@ -12,6 +12,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum 
 ## Mauris In Code
 
 ```js
+console.log(this)
 var x = 'test';
 function () {}
 ```

@@ -5,4 +5,29 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Phenome.js - Ultimate cross-framework component compiler
+    include ../templates/_styles
   body
+    include ../templates/_header
+    .home-intro
+      .container
+        .logo
+          .dna
+        h1 Phenome.js
+        h2 Ultimate cross-framework component compiler
+        //- .quote “Better than magic✨”
+        .buttons
+          a(href="/docs/getting-started.html").button Get Started
+        .version
+          | MIT Licensed, <b>v0.0.10</b> released on July 5, 2018
+        .gh-buttons
+          a(href="https://github.com/phenomejs/phenome" target="_blank").gh-logo
+          a(href="https://github.com/phenomejs/phenome" target="_blank").gh-stars
+            span
+            |  stars
+          a(href="https://github.com/phenomejs/phenome" target="_blank").gh-forks
+            span
+            |  forks
+    main
+      .container
+    include ../templates/_footer
+    include ../templates/_scripts

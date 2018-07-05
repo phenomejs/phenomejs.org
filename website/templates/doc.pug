@@ -4,6 +4,15 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title #{title}
-  body.
-    #{content}
+    title #{title} | Phenome.js
+    include ../templates/_styles
+  body
+    include ../templates/_header
+    main
+      .container.doc-container
+        .doc-sidebar
+          include ../templates/_doc-sidebar
+        .doc-content
+          | !{content}
+    include ../templates/_footer
+    include ../templates/_scripts

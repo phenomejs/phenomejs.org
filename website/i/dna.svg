@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="735px" height="108px" viewBox="0 0 735 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-340.000000, -146.000000)">
+            <g id="Group" transform="translate(340.000000, 150.000000)">
+                <g id="Group-Copy-2">
+                    <g id="Waves" stroke="#FFFFFF">
+                        <path d="M201.666667,0 C236.333333,0 245,100 288.333333,100 C331.666667,100 340.333333,0 375,0" id="Path-2" stroke-width="3"></path>
+                        <path d="M29,0 C63.6666667,0 72.3333333,100 115.666667,100 C159,100 167.666667,0 202.333333,0" id="Path-2-Copy" stroke-width="3"></path>
+                        <path d="M173,0 C207.666667,0 216.333333,100 259.666667,100 C303,100 311.666667,0 346.333333,0" id="Path-2" stroke-width="8" transform="translate(259.666667, 50.000000) scale(1, -1) translate(-259.666667, -50.000000) "></path>
+                        <path d="M0,0 C34.6666667,0 43.3333333,100 86.6666667,100 C130,100 138.666667,0 173.333333,0" id="Path-2-Copy-2" stroke-width="8" transform="translate(86.666667, 50.000000) scale(1, -1) translate(-86.666667, -50.000000) "></path>
+                    </g>
+                    <g id="Lines-33" transform="translate(61.666667, 1.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <polygon id="L-Copy-2" points="244.411543 50 248.808542 59.0461463 245.154701 92.7175073 244 93.384174"></polygon>
+                        <polygon id="L-Copy-6" points="72.6030008 50 77 59.0461463 73.3461586 92.7175073 72.1914581 93.384174"></polygon>
+                        <polygon id="L-Copy" points="220.952135 12 225.926485 18.2982941 221.618802 99.0239323 220 98.6999877"></polygon>
+                        <polygon id="L-Copy-7" points="49.1435935 12 54.117943 18.2982941 49.8102602 99.0239323 48.1914581 98.6999877"></polygon>
+                        <polygon id="L-Copy-4" points="172 13 177.196152 10 175.797435 38.5931516 174.862819 36.4384511"></polygon>
+                        <polygon id="L-Copy-8" points="0.191458053 13 5.38761048 10 3.988893 38.5931516 3.05427714 36.4384511"></polygon>
+                        <polygon id="L-Copy-3" points="150.373067 3.24401694 151.462383 3 154.01752 41.9953056 149 47.9713734"></polygon>
+                        <polygon id="L-Copy-10" points="323.373067 3.24401694 324.462383 3 327.01752 41.9953056 322 47.9713734"></polygon>
+                        <polygon id="L-Copy-2" points="125 4.9106836 127.244017 4 129.848736 86.7559831 125.229934 89.4226497"></polygon>
+                        <polygon id="L-Copy-11" points="298 4.9106836 300.244017 4 302.848736 86.7559831 298.229934 89.4226497"></polygon>
+                        <polygon id="L-Copy-5" points="102 45 104.5517 43 107.1034 96 102 94.7559831"></polygon>
+                        <polygon id="L-Copy-12" points="275 45 277.5517 43 280.1034 96 275 94.7559831"></polygon>
+                        <polygon id="L" points="196 0 201.708119 0.553418013 199.370091 81.1051178 197.370091 81.1051178"></polygon>
+                        <polygon id="L-Copy-9" points="24.1914581 0 29.8995766 0.553418013 27.5615489 81.1051178 25.5615489 81.1051178"></polygon>
+                    </g>
+                </g>
+                <g id="Group-Copy-3" transform="translate(346.000000, 0.000000)">
+                    <g id="Waves" stroke="#FFFFFF">
+                        <path d="M201.666667,0 C236.333333,0 245,100 288.333333,100 C331.666667,100 340.333333,0 375,0" id="Path-2" stroke-width="3"></path>
+                        <path d="M29,0 C63.6666667,0 72.3333333,100 115.666667,100 C159,100 167.666667,0 202.333333,0" id="Path-2-Copy" stroke-width="3"></path>
+                        <path d="M173,0 C207.666667,0 216.333333,100 259.666667,100 C303,100 311.666667,0 346.333333,0" id="Path-2" stroke-width="8" transform="translate(259.666667, 50.000000) scale(1, -1) translate(-259.666667, -50.000000) "></path>
+                        <path d="M0,0 C34.6666667,0 43.3333333,100 86.6666667,100 C130,100 138.666667,0 173.333333,0" id="Path-2-Copy-2" stroke-width="8" transform="translate(86.666667, 50.000000) scale(1, -1) translate(-86.666667, -50.000000) "></path>
+                    </g>
+                    <g id="Lines-33" transform="translate(61.666667, 1.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <polygon id="L-Copy-2" points="244.411543 50 248.808542 59.0461463 245.154701 92.7175073 244 93.384174"></polygon>
+                        <polygon id="L-Copy-6" points="72.6030008 50 77 59.0461463 73.3461586 92.7175073 72.1914581 93.384174"></polygon>
+                        <polygon id="L-Copy" points="220.952135 12 225.926485 18.2982941 221.618802 99.0239323 220 98.6999877"></polygon>
+                        <polygon id="L-Copy-7" points="49.1435935 12 54.117943 18.2982941 49.8102602 99.0239323 48.1914581 98.6999877"></polygon>
+                        <polygon id="L-Copy-4" points="172 13 177.196152 10 175.797435 38.5931516 174.862819 36.4384511"></polygon>
+                        <polygon id="L-Copy-8" points="0.191458053 13 5.38761048 10 3.988893 38.5931516 3.05427714 36.4384511"></polygon>
+                        <polygon id="L-Copy-3" points="150.373067 3.24401694 151.462383 3 154.01752 41.9953056 149 47.9713734"></polygon>
+                        <polygon id="L-Copy-10" points="323.373067 3.24401694 324.462383 3 327.01752 41.9953056 322 47.9713734"></polygon>
+                        <polygon id="L-Copy-2" points="125 4.9106836 127.244017 4 129.848736 86.7559831 125.229934 89.4226497"></polygon>
+                        <polygon id="L-Copy-11" points="298 4.9106836 300.244017 4 302.848736 86.7559831 298.229934 89.4226497"></polygon>
+                        <polygon id="L-Copy-5" points="102 45 104.5517 43 107.1034 96 102 94.7559831"></polygon>
+                        <polygon id="L-Copy-12" points="275 45 277.5517 43 280.1034 96 275 94.7559831"></polygon>
+                        <polygon id="L" points="196 0 201.708119 0.553418013 199.370091 81.1051178 197.370091 81.1051178"></polygon>
+                        <polygon id="L-Copy-9" points="24.1914581 0 29.8995766 0.553418013 27.5615489 81.1051178 25.5615489 81.1051178"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
