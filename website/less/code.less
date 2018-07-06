@@ -8,8 +8,7 @@
 @codeGreen: #C2E988;
 @codeLightBlue: #86DDFF;
 @codeBlue: #80A8FF;
-@codePurple: #C88FEC;
-@codePink: #FF506E;
+@codePink: #C88FEC;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
 
@@ -33,13 +32,6 @@ pre code {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
-}
-
-.hljs-punctuation {
-  color: @codeLightBlue;
-}
-.hljs-operator {
-  color: @codePurple;
 }
 .hljs-subst {
   color: @codeMain;
@@ -77,39 +69,30 @@ pre code {
   }
 }
 // JS
-.hljs-context {
-  color: @codePink;
-  font-style: italic;
-}
-.hljs-expression {
-  color: #fff;
-}
 .hljs-built_in {
   color: @codeYellow;
 }
-.hljs-keyword {
-  color: @codePurple;
-}
-.hljs-keyword_semantic {
-  color: @codeLightBlue;
-}
-.hljs-string {
-  color: @codeGreen;
-}
-.hljs-literal, .hljs-params {
-  color: @codeOrange;
-}
-.hljs-function {
-  color: @codeBlue;
+// .hljs.javascript {
   .hljs-keyword {
-    color: @codePurple;
+    color: @codePink;
     font-weight: bold;
-    font-style: normal;
   }
-}
-.hljs-method {
-  color: @codeBlue;
-}
+  .hljs-string {
+    color: @codeGreen;
+  }
+  .hljs-literal, .hljs-params {
+    color: @codeOrange;
+  }
+  .hljs-function {
+    color: @codeBlue;
+    .hljs-keyword {
+      color: @codePink;
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+
+// }
 .hljs-selector-class {
   color: @codeYellow;
 }
@@ -123,5 +106,5 @@ pre code {
   color: @codeYellow;
 }
 .hljs-selector-pseudo {
-  color: @codePurple;
+  color: @codePink;
 }
