@@ -17,13 +17,14 @@ function build(cb) {
     const filePath = path.join('../docs/', fileName);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const docData = parseMd(fileContent);
-
     gulp.src('templates/doc.pug')
       .pipe(gulpPug({
         pug,
         pretty: true,
         locals: {
           config,
+          sectionId: 'docs',
+          docId: docData.data.id,
           content: docData.html,
           ...docData.data,
         },

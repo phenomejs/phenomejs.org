@@ -1,5 +1,34 @@
-ul
-  li Link 1
-  li Link 2
-  li Link 3
-  li Link 4
+- var isActiveDoc = function (id) {return docId === id ? 'active' : ''}
+.doc-sidebar-section
+  .title Introduction
+  ul
+    li(class=isActiveDoc('getting-started'))
+      a(href="/docs/getting-started.html") Getting Started
+    li(class=isActiveDoc('installation'))
+      a(href="/docs/installation.html") Installation
+.doc-sidebar-section
+  .title Phenome Component
+  ul
+    li(class=isActiveDoc('name'))
+      a(href="/docs/name.html") Name
+    li(class=isActiveDoc('props'))
+      a(href="/docs/props.html") Props
+    li(class=isActiveDoc('state'))
+      a(href="/docs/state.html") State
+    li(class=isActiveDoc('render'))
+      a(href="/docs/render.html") Render
+    li(class=isActiveDoc('methods'))
+      a(href="/docs/methods.html") Methods
+    li(class=isActiveDoc('life-cycle'))
+      a(href="/docs/life-cycle.html") Life Cycle
+    li(class=isActiveDoc('watch'))
+      a(href="/docs/watch.html") Watch
+    li(class=isActiveDoc('static'))
+      a(href="/docs/static.html") Static
+    li(class=isActiveDoc('events'))
+      a(href="/docs/events.html") Events
+    li(class=isActiveDoc('refs'))
+      a(href="/docs/refs.html") Refs
+    li(class=isActiveDoc('slots'))
+      a(href="/docs/slots.html") Slots
+

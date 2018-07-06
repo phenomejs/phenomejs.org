@@ -1,10 +1,11 @@
+- var isActiveSection = function (id) {return sectionId === id ? 'active' : ''}
 header
   .container
     a.logo(href="/")
       span Phenome
     nav
       ul
-        li.active
+        li(class=isActiveSection('docs'))
           a(href="/docs/getting-started.html") Docs
         li
           a(href="https://github.com/phenomejs/phenome" target="_blank") GitHub

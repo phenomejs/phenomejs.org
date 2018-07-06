@@ -1,6 +1,6 @@
 @red: #F61813;
-@purple: #b700ff;
 @dark: #2a2d3a;
+@headerBg: #231a26;
 
 html, body {
   position: relative;
@@ -72,103 +72,6 @@ h4, .h4 {
   margin: 15px 0;
   line-height: 1.4;
 }
-header {
-  height: 60px;
-  background: #1a1c26;
-  background: #231a26;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  .logo {
-    background: url('../i/logo.svg') no-repeat left;
-    background-size: auto 100%;
-    height: 40px;
-    display: block;
-    padding-left: 50px;
-    line-height: 40px;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  nav {
-    height: 100%;
-    ul {
-      height: 100%;
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      display: block;
-    }
-    a {
-      display: block;
-      line-height: 60px;
-      text-decoration: none;
-      color: #fff;
-      opacity: 0.5;
-      padding: 0 20px;
-      position: relative;
-      transition: 200ms;
-      &:active, &:hover {
-        opacity: 1;
-      }
-    }
-    .active a, a.active {
-      opacity: 1;
-    }
-    .active a:before, a.active:before {
-      content: '';
-      width: 100%;
-      height: 4px;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      background: @red;
-    }
-  }
-}
-.gh-buttons {
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 12px;
-  align-items: center;
-  font-weight: 700;
-  color: #000;
-  a {
-    color: inherit;
-    &:hover {
-      opacity: 0.7;
-    }
-    + a {
-      margin-left: 10px;
-    }
-  }
-  span {
-    font-size: 18px;
-    letter-spacing: -0.1em;
-    font-weight: 500;
-  }
-  .gh-logo {
-    background: url(../i/gh-logo.svg) no-repeat left;
-    background-size: auto 100%;
-    height: 18px;
-    width: 18px;
-  }
-}
-
 main {
   .container {
     padding-top: 40px;
@@ -176,7 +79,9 @@ main {
   }
 }
 
+@import './header.less';
 @import './home.less';
 @import './code.less';
 @import './doc.less';
 @import './footer.less';
+@import './sidebar.less';

@@ -1,0 +1,34 @@
+.doc-sidebar {
+  ul, li {
+    // font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  li {
+    position: relative;
+  }
+  li + li {
+    margin-top: 7px;
+  }
+  .title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  a {
+    color: #555;
+    &:hover {
+      color: @red;
+    }
+  }
+  li.active {
+    a {
+      color: @red;
+      font-weight: 500;
+    }
+  }
+}
+.doc-sidebar-section + .doc-sidebar-section {
+  margin-top: 20px;
+}
