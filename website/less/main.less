@@ -2,7 +2,12 @@
 @dark: #2a2d3a;
 @headerBg: #231a26;
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
 @import (inline) '../node_modules/normalize.css/normalize.css';
+
+.monospace() {
+  font-family: 'Roboto Mono', 'Source Code Pro', Menlo, Monaco, Consolas, "Courier New", monospace;
+}
 
 html, body {
   position: relative;
@@ -48,8 +53,11 @@ a {
   width: 100%;
   box-sizing: border-box;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   color: #111;
+  a {
+    color: inherit;
+  }
 }
 h1, .h1 {
   font-size: 38px;
@@ -87,3 +95,4 @@ main {
 @import './doc.less';
 @import './footer.less';
 @import './sidebar.less';
+@import './table.less';

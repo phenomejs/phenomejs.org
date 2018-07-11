@@ -19,6 +19,11 @@ import Utils from '../utils/utils';
 import F7ListItemContent from './list-item-content';
 import Mixins from '../utils/mixins';
 
+var x = 3;
+var SUPERTEST = 34;
+var test = `super-awesome${x}`;
+const w = Window.test;
+console.log(Prism.languages.jsx);
 export default {
   name: 'f7-list-item',
   props: {

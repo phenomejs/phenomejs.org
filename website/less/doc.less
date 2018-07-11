@@ -10,3 +10,22 @@
   flex-shrink: 10;
   margin-left: 20px;
 }
+.important-note {
+  padding: 10px 20px;
+  background: #ffecec;
+  border-left: 4px solid @red;
+  p, ul, ol {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:before {
+    content: "Note";
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+}

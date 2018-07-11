@@ -9,14 +9,42 @@ const parseMd = require('./parse-md');
 const config = require('../config');
 
 function build(cb) {
+  const sidebarConfig = require('../doc-sidebar-config');
   const time = Date.now();
   const docsFiles = fs.readdirSync('../docs').filter(fileName => fileName.indexOf('.') !== 0);
 
   let cbs = 0;
+  const docs = [];
+  const sidebar = [];
   docsFiles.forEach((fileName) => {
     const filePath = path.join('../docs/', fileName);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const docData = parseMd(fileContent);
+    docs.push({
+      fileName,
+      ...docData,
+    });
+  });
+  sidebarConfig.forEach((section) => {
+    const sidebarDocs = [];
+    section.docs.forEach((sectionDoc) => {
+      docs.forEach((doc) => {
+        if (doc.data.id === sectionDoc.id)  {
+          sidebarDocs.push({
+            id: doc.data.id,
+            title: sectionDoc.title,
+            url: `/docs/${path.parse(doc.fileName).name}.html`
+          });
+        }
+      })
+    })
+    sidebar.push({
+      title: section.title,
+      docs: sidebarDocs,
+    })
+  })
+
+  docs.forEach((doc) => {
     gulp.src('templates/doc.pug')
       .pipe(gulpPug({
         pug,
@@ -24,16 +52,17 @@ function build(cb) {
         locals: {
           config,
           sectionId: 'docs',
-          docId: docData.data.id,
-          content: docData.html,
-          ...docData.data,
+          docId: doc.data.id,
+          content: doc.html,
+          sidebar,
+          ...doc.data,
         },
       }))
       .on('error', (err) => {
         console.log(err);
       })
       .pipe(rename((file) => {
-        file.basename = path.parse(fileName).name;
+        file.basename = path.parse(doc.fileName).name;
       }))
       .pipe(gulp.dest('../build/docs'))
       .pipe(connect.reload())

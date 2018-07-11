@@ -2,10 +2,19 @@ const Remarkable = require('remarkable');
 const yaml = require('js-yaml');
 const highlight = require('./highlight');
 const md = new Remarkable({
+  html: true,
   highlight(code, lang) {
     return highlight(code, lang);
   }
 });
+
+function alias(str) {
+  return str
+    .trim()
+    .toLowerCase()
+    .replace(/[^\w]/g, '-')
+    .replace(/[-]{2,}/g, '-');
+}
 
 function parse(contents = '') {
   let mdContent = contents.trim();
@@ -15,8 +24,24 @@ function parse(contents = '') {
     yamlContent = mdContent.split('---')[1];
     mdContent = mdContent.split('---').filter((el, index) => index > 1).join('').trim();
   }
+  mdContent = mdContent
+    .replace(/\n## ([^\n]*)/g, function (str, found) {
+      return `\n## <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
+    })
+    .replace(/\n### ([ ^\n]*)/g, function (str, found) {
+      return `\n### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
+    })
+    .replace(/\n#### ([ ^\n]*)/g, function (str, found) {
+      return `\n#### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
+    })
+    .replace(/\n##### ([ ^\n]*)/g, function (str, found) {
+      return `\n##### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
+    })
+
   const html = md.render(mdContent);
+
   if (yamlContent) data = yaml.safeLoad(yamlContent);
+
   return {
     data,
     html,
