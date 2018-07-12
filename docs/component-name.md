@@ -31,17 +31,19 @@ export default {
   // name kept as it is
   name: 'my-component',
   render() {
-    return _h('div', null, 'Hello wordl!')
+    const _h = this.$createElement;
+    return _h('div', 'Hello wordl!')
   }
 }
 ```
 
 **React compiled output:**
+
 ```jsx
 // Class name based on name prop: my-component -> MyComponent
 class MyComponent extends React.Component {
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
   }
   render() {
     return React.createElement('div', null, 'Hello wordl!')
@@ -49,6 +51,4 @@ class MyComponent extends React.Component {
 }
 // Component displayName based on name prop
 MyComponent.displayName = 'my-component';
-
-export default MyComponent;
 ```
