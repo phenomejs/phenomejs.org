@@ -55,8 +55,14 @@ a {
 }
 h1, h2, h3, h4, h5 {
   color: #111;
+  position: relative;
   a {
     color: inherit;
+  }
+  > a[name] {
+    position: absolute;
+    top: -65px;
+    pointer-events: none;
   }
 }
 h1, .h1 {
