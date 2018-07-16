@@ -95,6 +95,28 @@ main {
   }
 }
 
+// Index
+h1 + ul {
+  padding-left: 20px;
+  border-left: 4px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  a {
+    color: inherit;
+  }
+  a:hover {
+    border-bottom: 1px solid #000;
+  }
+  li {
+    display: block;
+    position: relative;
+
+    + li {
+      margin-top: 0.25em;
+    }
+  }
+}
+
 @import './header.less';
 @import './home.less';
 @import './code.less';

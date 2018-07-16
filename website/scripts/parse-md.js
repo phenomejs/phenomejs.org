@@ -24,19 +24,28 @@ function parse(contents = '') {
     yamlContent = mdContent.split('---')[1];
     mdContent = mdContent.split('---').filter((el, index) => index > 1).join('').trim();
   }
+
+  const index = [];
+
   mdContent = mdContent
     .replace(/\n## ([^\n]*)/g, function (str, found) {
+      index.push(`* [${found}](#${alias(found)})`);
       return `\n## <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
     })
-    .replace(/\n### ([ ^\n]*)/g, function (str, found) {
+    .replace(/\n### ([^\n]*)/g, function (str, found) {
+      index.push(`  * [${found}](#${alias(found)})`);
       return `\n### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
     })
-    .replace(/\n#### ([ ^\n]*)/g, function (str, found) {
+    .replace(/\n#### ([^\n]*)/g, function (str, found) {
+      index.push(`    * [${found}](#${alias(found)})`);
       return `\n#### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
     })
-    .replace(/\n##### ([ ^\n]*)/g, function (str, found) {
+    .replace(/\n##### ([^\n]*)/g, function (str, found) {
+      index.push(`      * [${found}](#${alias(found)})`);
       return `\n##### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
-    })
+    });
+
+  mdContent = mdContent.replace('\n{{index}}\n', `\n${index.join('\n')}\n`);
 
   const html = md.render(mdContent);
 

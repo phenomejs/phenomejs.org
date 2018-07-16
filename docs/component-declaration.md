@@ -4,6 +4,8 @@ title: Phenome Component Declaration
 ---
 # Phenome Component Declaration
 
+{{index}}
+
 ## Declaration
 
 Each Phenome component must be declared in separate `.jsx` (or `.js`) file and declared as a **default not named object export**:

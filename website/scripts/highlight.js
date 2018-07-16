@@ -8,7 +8,7 @@ Prism.languages.jsx.keyword = /\b(?:as|async|await|break|case|catch|class|const|
 Prism.languages.jsx.context = /\b(?:this|self)\b/;
 Prism.languages.jsx.literal = /\b(?:undefined|null)\b/;
 Prism.languages.jsx.script.inside.context = /\b(?:this|self)\b/;
-Prism.languages.jsx['built-in'] = /\b(?:Number|String|Function|Boolean|Array|Symbol|Math|Date|RegExp|Map|Set|WeakMap|WeakSet|Object|JSON|Promise|Generator|Window|console)\b/;
+Prism.languages.jsx['built-in'] = /\b(?:Number|String|Function|Boolean|Array|Symbol|Math|Date|RegExp|Map|Set|WeakMap|WeakSet|Object|JSON|Promise|Generator|Window|console|window|FormData)\b/;
 
 function highlight(code, lang) {
   if (lang === 'js') lang = 'javascript';
