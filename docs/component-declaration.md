@@ -1,8 +1,8 @@
 ---
 id: 'component-declaration'
-title: Phenome Component Declaration
+title: Component Declaration
 ---
-# Phenome Component Declaration
+# Component Declaration
 
 {{index}}
 
@@ -128,35 +128,38 @@ Let's look at list of all available phenome component object properties
       <td>componentWillMount</td>
       <td>function</td>
       <td>
-        <p><code>componentWillMount()</code> is invoked just before mounting occurs. It is called before <code>render()</code>, therefore calling <code>setState()</code> synchronously in this method will not trigger an extra rendering.</p>
-        <p class="important-note">It is not recommended to use this method. We recommend to use the <code>state()</code> instead for initializing state</p>
+        <p>Invoked just before mounting occurs. It is called before <code>render()</code>, therefore calling <code>setState()</code> synchronously in this method will not trigger an extra rendering.</p>
       </td>
     </tr>
     <tr>
       <td>componentDidMount</td>
       <td>function</td>
       <td>
-        <p><code>componentDidMount()</code> is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.</p>
+        <p>Invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.</p>
         <p>This method is a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in <code>componentWillUnmount()</code></p
       </td>
     </tr>
     <tr>
       <td>componentWillUnmount</td>
       <td>function</td>
-      <td><p><code>componentWillUnmount()</code> is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in <code>componentDidMount()</code></p></td>
+      <td>Invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in <code>componentDidMount()</code></p></td>
     </tr>
     <tr>
       <td>componentWillUpdate</td>
       <td>function</td>
       <td>
-        <p><code>componentWillUpdate()</code> is invoked just before rendering when new props or state are being received. Use this as an opportunity to perform preparation before an update occurs.</p>
-        <p class="important-note">It is not recommended to use this method. Typically, this method can be replaced by <code>componentDidUpdate()</code></p>
+        <p>Invoked just before rendering when new props or state are being received. Use this as an opportunity to perform preparation before an update occurs.</p>
       </td>
     </tr>
     <tr>
       <td>componentDidUpdate</td>
       <td>function</td>
-      <td><p><code>componentDidUpdate()</code> is invoked immediately after updating occurs.</p></td>
+      <td>Invoked immediately after updating occurs.</p></td>
+    </tr>
+    <tr>
+      <td>componentDidCatch</td>
+      <td>function(error, info)</td>
+      <td>Called when an error from any descendent component is captured. It receives the error and a string containing information on where the error was captured.</p></td>
     </tr>
   </tbody>
 </table>

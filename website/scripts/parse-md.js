@@ -8,12 +8,15 @@ const md = new Remarkable({
   }
 });
 
-function alias(str) {
-  return str
+function alias(string) {
+  let str = string
     .trim()
     .toLowerCase()
     .replace(/[^\w]/g, '-')
     .replace(/[-]{2,}/g, '-');
+  if (str[0] === '-') str = str.substr(1);
+  if (str[str.length - 1] === '-') str = str.substr(0, str.length - 1);
+  return str;
 }
 
 function parse(contents = '') {
