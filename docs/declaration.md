@@ -1,5 +1,5 @@
 ---
-id: 'component-declaration'
+id: 'declaration'
 title: Component Declaration
 ---
 # Component Declaration

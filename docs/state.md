@@ -1,5 +1,5 @@
 ---
-id: 'component-state'
+id: 'state'
 title: Component State
 ---
 # Component State

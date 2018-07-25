@@ -1,5 +1,5 @@
 ---
-id: 'component-methods'
+id: 'methods'
 title: Component Methods
 ---
 # Component Methods

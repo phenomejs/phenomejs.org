@@ -16,51 +16,51 @@ module.exports = [
     title: 'Phenome Component',
     docs: [
       {
-        id: 'component-declaration',
+        id: 'declaration',
         title: 'Component Declaration',
       },
       {
-        id: 'component-name',
+        id: 'name',
         title: 'Name',
       },
       {
-        id: 'component-props',
+        id: 'props',
         title: 'Props',
       },
       {
-        id: 'component-state',
+        id: 'state',
         title: 'State',
       },
       {
-        id: 'component-rendering',
+        id: 'rendering-jsx',
         title: 'Rendering / JSX',
       },
       {
-        id: 'component-methods',
+        id: 'methods',
         title: 'Methods',
       },
       {
-        id: 'component-life-cycle',
+        id: 'life-cycle',
         title: 'Life Cycle',
       },
       {
-        id: 'component-computed',
+        id: 'computed-properties',
         title: 'Computed Properties',
       },
       {
-        id: 'component-watch',
+        id: 'watchers',
         title: 'Watchers',
       },
       {
-        id: 'component-functional',
+        id: 'functional-component',
         title: 'Functional Component',
       },
       {
-        id: 'component-static',
+        id: 'static-properties',
         title: 'Static Properties',
       },
       {
-        id: 'component-dispatch-events',
+        id: 'dispatch-events',
         title: 'Dispatch Events',
       },
     ]

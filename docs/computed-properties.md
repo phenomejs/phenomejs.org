@@ -1,5 +1,5 @@
 ---
-id: 'component-computed'
+id: 'computed-properties'
 title: Computed Properties
 ---
 # Computed Properties

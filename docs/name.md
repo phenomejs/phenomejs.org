@@ -1,5 +1,5 @@
 ---
-id: 'component-name'
+id: 'name'
 title: Component Name
 ---
 # Component Name

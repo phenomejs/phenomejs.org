@@ -1,5 +1,5 @@
 ---
-id: 'component-life-cycle'
+id: 'life-cycle'
 title: Component Life Cycle
 ---
 # Component Life Cycle

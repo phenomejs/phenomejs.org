@@ -1,5 +1,5 @@
 ---
-id: 'component-dispatch-events'
+id: 'dispatch-events'
 title: Dispatch Events
 ---
 # Dispatch Events

@@ -1,5 +1,5 @@
 ---
-id: 'component-props'
+id: 'props'
 title: Component Props
 ---
 # Component Props
