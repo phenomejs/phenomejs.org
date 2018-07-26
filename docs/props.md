@@ -135,7 +135,7 @@ export default {
 
 ## Merging with Existing Attributes/Props
 
-By default, Vue will merge most of HTML attributes to the component element, but React won't. So the important component element attributes that you expect must be specified as component props. Also, Vue doesn't allow to register `style` prop. And to cover all the cases we can use the following pattern:
+By default, Vue will merge most of HTML attributes to the component element, but React won't. So the important component element attributes that you expect, must be specified as component props. Also, Vue doesn't allow to register `style` prop. And to cover all the cases we can use the following pattern:
 
 ```jsx
 export default {
