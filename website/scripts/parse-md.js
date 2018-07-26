@@ -36,15 +36,12 @@ function parse(contents = '') {
       return `\n## <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
     })
     .replace(/\n### ([^\n]*)/g, function (str, found) {
-      index.push(`  * [${found}](#${alias(found)})`);
       return `\n### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
     })
     .replace(/\n#### ([^\n]*)/g, function (str, found) {
-      index.push(`    * [${found}](#${alias(found)})`);
       return `\n#### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
     })
     .replace(/\n##### ([^\n]*)/g, function (str, found) {
-      index.push(`      * [${found}](#${alias(found)})`);
       return `\n##### <a name="${alias(found)}"></a>[${found}](#${alias(found)})`
     });
 

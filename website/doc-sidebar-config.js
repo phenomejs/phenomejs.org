@@ -60,8 +60,8 @@ module.exports = [
         title: 'Static Properties',
       },
       {
-        id: 'dispatch-events',
-        title: 'Dispatch Events',
+        id: 'custom-events',
+        title: 'Custom Events',
       },
     ]
   }

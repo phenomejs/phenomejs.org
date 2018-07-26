@@ -1,8 +1,8 @@
 ---
 id: 'static-properties'
-title: Component Static Properties
+title: Static Component Properties
 ---
-# Component Static Properties
+# Static Component Properties
 
 For the case you need some additional static properties or methods that should be available on exported component, we can use component's `static` property.
 
