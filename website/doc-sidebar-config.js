@@ -17,7 +17,7 @@ module.exports = [
     docs: [
       {
         id: 'api',
-        title: 'Node API',
+        title: 'Compiler API',
       },
     ],
   },

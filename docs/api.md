@@ -209,7 +209,7 @@ phenome().then(() => {
 
 ## Important Notes
 
-There are few important notes that we need to know about compiler:
+There are few important notes that we need to know about Phenome compiler:
 
-* Phenome compiler will compile and process only those file which match to Phenome component pattern - **default not named object export with at least `name` and `render` properties**
+* Phenome compiler will compile and process only those file that match to Phenome component pattern - **default not named object export with at least `name` and `render` properties**
 * Phenome compiler doesn't do any transpilation (ES-next to ES5) and bundling (don't process `imports`) - it leaves everything as is. If you need transpilation or bundling, you can just post process compiled React and Vue components with your favorite tools, e.g. Buble, Babel, Rollup, Webpack, etc.
