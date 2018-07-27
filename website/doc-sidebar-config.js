@@ -13,10 +13,19 @@ module.exports = [
     ]
   },
   {
+    title: 'API',
+    docs: [
+      {
+        id: 'api',
+        title: 'Node API',
+      },
+    ],
+  },
+  {
     title: 'Phenome Component',
     docs: [
       {
-        id: 'declaration',
+        id: 'component-declaration',
         title: 'Component Declaration',
       },
       {

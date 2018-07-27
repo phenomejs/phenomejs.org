@@ -1,7 +1,52 @@
 footer {
   background: @dark;
+  color: rgba(255,255,255,0.7);
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .links {
+    display: flex;
+  }
+  .links-block-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+  .links-block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.03em;
+    li {
+      display: block;
+    }
+    li + li {
+      margin-top: 5px;
+    }
+  }
   .container {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .copyright {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    a {
+
+    }
+    p {
+      margin: 10px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

@@ -3,8 +3,6 @@ const pug = require('pug');
 const gulpPug = require('gulp-pug');
 const connect = require('gulp-connect');
 
-const config = require('../config');
-
 function build(cb) {
   const time = Date.now();
   gulp.src(['i/*.*', 'i/**/*.*'])

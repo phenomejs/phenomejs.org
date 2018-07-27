@@ -1,8 +1,8 @@
 ---
-id: 'declaration'
-title: Component Declaration
+id: 'component-declaration'
+title: Phenome Component Declaration
 ---
-# Component Declaration
+# Phenome Component Declaration
 
 {{index}}
 

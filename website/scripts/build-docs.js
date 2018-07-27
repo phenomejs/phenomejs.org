@@ -6,7 +6,7 @@ const gulpPug = require('gulp-pug');
 const rename = require('gulp-rename');
 const connect = require('gulp-connect');
 const parseMd = require('./parse-md');
-const config = require('../config');
+const meta = require('../meta');
 
 function build(cb) {
   const sidebarConfig = require('../doc-sidebar-config');
@@ -50,7 +50,7 @@ function build(cb) {
         pug,
         pretty: true,
         locals: {
-          config,
+          meta,
           sectionId: 'docs',
           docId: doc.data.id,
           content: doc.html,

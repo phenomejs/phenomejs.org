@@ -1,7 +1,7 @@
 const Prism = require('prismjs');
 const loadLanguages = require('prismjs/components/index');
 
-loadLanguages(['jsx']);
+loadLanguages(['jsx', 'bash']);
 
 function extendLanguage(lang) {
   Prism.languages[lang].keyword = /\b(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|of|package|private|protected|public|return|set|static|super|switch|throw|try|typeof|var|void|while|with|yield)\b/;
@@ -18,6 +18,7 @@ extendLanguage('jsx');
 
 function highlight(code, lang) {
   if (lang === 'js') lang = 'javascript';
+  if (!lang) return code;
   return Prism.highlight(code, Prism.languages[lang], lang)
 }
 

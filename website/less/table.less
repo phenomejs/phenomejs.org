@@ -31,8 +31,25 @@ table {
   th[colspan] {
     background: #f3f3f3;
   }
-  tbody tr:nth-child(2n) {
+  &:not(.no-strips) tbody tr:nth-child(2n) {
     background: #fafafa;
+  }
+  .subparam-open-row, .subparam-close-row {
+    td {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  .subparam-open-row, .subparam-close-row, .subparam-row {
+    background: none !important;
+    td {
+      border-top: none;
+    }
+  }
+  .subparam-row {
+    td:first-child {
+      padding-left: 32px;
+    }
   }
 }
 table.params-table {

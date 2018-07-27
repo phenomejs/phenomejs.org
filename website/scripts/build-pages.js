@@ -3,7 +3,7 @@ const pug = require('pug');
 const gulpPug = require('gulp-pug');
 const connect = require('gulp-connect');
 
-const config = require('../config');
+const meta = require('../meta');
 
 function build(cb) {
   const time = Date.now();
@@ -12,7 +12,7 @@ function build(cb) {
       pug,
       pretty: true,
       locals: {
-        config,
+        meta,
       }
     }))
     .on('error', (err) => {
