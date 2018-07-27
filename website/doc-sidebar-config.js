@@ -63,6 +63,14 @@ module.exports = [
         id: 'custom-events',
         title: 'Custom Events',
       },
+      {
+        id: 'conditional-comments',
+        title: 'Conditional Comments',
+      },
+      {
+        id: 'environment-variables',
+        title: 'Environment Variables',
+      },
     ]
   }
 ]
