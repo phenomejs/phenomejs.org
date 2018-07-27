@@ -6,7 +6,7 @@ title: Custom Events
 
 {{index}}
 
-Component custom events is a proper way of your component to communicate with parent components and send data to them. Even better, React, unlike Vue, doesn't have any convenient event system out of the box, and React components compiled with Phenome will have such.
+Component custom events is a proper way of your component to communicate with parent components and send data to them (lift state up). Even better, React, unlike Vue, doesn't have any convenient event system out of the box, and React components compiled with Phenome will have such 💪.
 
 ## Dispatch Events
 
