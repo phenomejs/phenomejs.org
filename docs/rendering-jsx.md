@@ -330,7 +330,7 @@ Style keys are camelCased in order to be consistent with accessing the propertie
 
 ## `dangerouslySetInnerHTML`
 
-`dangerouslySetInnerHTML` is a replacement for using `innerHTML` in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack. So, you can set HTML directly from React, but you have to type out `dangerouslySetInnerHTML` and pass an object with a `__html` key, to remind yourself that it’s dangerous. For example:
+`dangerouslySetInnerHTML` is a replacement for using `innerHTML` in the browser DOM. In general, setting HTML from code is risky because it’s easy to inadvertently expose your users to a cross-site scripting (XSS) attack. So, you can set HTML directly, but you have to type out `dangerouslySetInnerHTML` and pass an object with a `__html` key, to remind yourself that it’s dangerous. For example:
 
 ```jsx
 export default {
@@ -602,11 +602,11 @@ Where `name` is the name of the named slot, or `this.slots.default` in case of d
 So basically this is how slot tags can be replaces in expressions:
 
 ```jsx
-<slot /> /* === */ this.slots.default
+<slot /> /* >>> */ this.slots.default
 
-<slot name="header" /> /* === */ this.slots.header
+<slot name="header" /> /* >>> */ this.slots.header
 
-<slot>Default Content</slot> /* === */ (this.slots.default || 'Default Content')
+<slot>Default Content</slot> /* >>> */ (this.slots.default || 'Default Content')
 ```
 
 So we can rewrite our blog post component in different way:

@@ -30,6 +30,27 @@ function parse(contents = '') {
 
   const index = [];
 
+  function parseCode() {
+    mdContent = mdContent
+      .replace(/<pre><code([ ]?)([a-z]*)>([^<]*)<\/code><\/pre>/g, (original, $1, lang, code) => {
+        let trimSpaces = code.match(/[^ ^\n]/);
+        code = code
+          .trim()
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+
+        if (trimSpaces && trimSpaces.index > 0) {
+          const trimSpacesRE = new RegExp(`\n[\ ]{${trimSpaces.index - 1}}`, 'g')
+          code = code.replace(trimSpacesRE, '\n');
+        }
+        let highlighted = highlight(code, lang);
+        highlighted = highlighted.replace(/[\n]/g, '<br>');
+        return `<pre><code>${highlighted}</code></pre>`
+      });
+    if (mdContent.indexOf('{{#code') >= 0) parseCode();
+  }
+  parseCode();
+
   mdContent = mdContent
     .replace(/\n## ([^\n]*)/g, function (str, found) {
       index.push(`* [${found}](#${alias(found)})`);

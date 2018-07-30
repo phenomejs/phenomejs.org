@@ -1,15 +1,16 @@
 module.exports = [
   {
-    title: 'Introduction',
+    title: 'Get Started',
     docs: [
-      {
-        id: 'getting-started',
-        title: 'Getting Started'
-      },
       {
         id: 'installation',
         title: 'Installation'
       },
+      {
+        id: 'getting-started',
+        title: 'Getting Started'
+      },
+
     ]
   },
   {

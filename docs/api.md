@@ -39,6 +39,52 @@ phenome(params)
       </td>
     </tr>
     <tr>
+      <td>env</td>
+      <td>object</td>
+      <td></td>
+      <td>
+        <p>Object with environment variables that will be replaced during compilation</p>
+        <p>For example, if you specify such <code>env</code> variables:</p>
+        <pre><code js>
+{
+  NODE_ENV: 'production'
+  FOO: true
+}
+        </code></pre>
+        <p>Then you will be able to use them in code like:</p>
+        <pre><code js>
+if (process.env.NODE_ENV === 'production') {
+  // do something
+}
+if (process.env.FOO === true) {
+  // do something
+}
+        </code></pre>
+        <p>After env variables replacements you may have "constant conditions", check <a href="./environment-variables.html">how they work</a> in Phenome components.</p>
+        <div class="important-note">
+          <p>In addition to any env variables you pass, there will also be <code>process.env.COMPILER</code> variable passed automatically that will be equal to <code>'vue'</code> or <code>'react'</code> depending on target compiler.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>replace</td>
+      <td>object</td>
+      <td></td>
+      <td>
+        <p>Object with variables that need to be replaced in code. Each key can also be a regular expression, e.g.</p>
+        <pre><code js>
+{
+  // replace foo with bar
+  'foo': 'bar',
+
+  // regexp replace
+  /[a-z]*/: 'foo'
+}
+        </code></pre>
+        <p>After such replacements you may have "constant conditions", check <a href="./environment-variables.html">how they work</a> in Phenome components.</p>
+      </td>
+    </tr>
+    <tr>
       <td>react</td>
       <td>object</td>
       <td></td>
@@ -49,6 +95,18 @@ phenome(params)
       <td>string</td>
       <td></td>
       <td>Path where to save compiled React components</td>
+    </tr>
+    <tr>
+      <td>react.env</td>
+      <td>object</td>
+      <td></td>
+      <td>Same as global <code>env</code>, but specific for React compiler</td>
+    </tr>
+    <tr>
+      <td>react.env</td>
+      <td>object</td>
+      <td></td>
+      <td>Same as global <code>replace</code>, but specific for React compiler</td>
     </tr>
     <tr>
       <td>react.helpers</td>
@@ -73,6 +131,18 @@ phenome(params)
       <td>object</td>
       <td></td>
       <td>Object with Vue compiler parameters:</td>
+    </tr>
+    <tr>
+      <td>vue.env</td>
+      <td>object</td>
+      <td></td>
+      <td>Same as global <code>env</code>, but specific for Vue compiler</td>
+    </tr>
+    <tr>
+      <td>vue.env</td>
+      <td>object</td>
+      <td></td>
+      <td>Same as global <code>replace</code>, but specific for Vue compiler</td>
     </tr>
     <tr>
       <td>vue.out</td>
@@ -206,10 +276,23 @@ phenome().then(() => {
   console.log('Oops, error occured');
 })
 ```
+## Transpiling And Bundling
 
-## Important Notes
+Phenome compiler doesn't do any transpilation (ES-next to ES5) and bundling (don't process `imports`) - it leaves everything as is. If you need transpilation or bundling, you can just post process compiled React and Vue components with your favorite tools, e.g. Buble, Babel, Rollup, Webpack, etc.
 
-There are few important notes that we need to know about Phenome compiler:
+## Dependencies
 
-* Phenome compiler will compile and process only those file that match to Phenome component pattern - **default not named object export with at least `name` and `render` properties**
-* Phenome compiler doesn't do any transpilation (ES-next to ES5) and bundling (don't process `imports`) - it leaves everything as is. If you need transpilation or bundling, you can just post process compiled React and Vue components with your favorite tools, e.g. Buble, Babel, Rollup, Webpack, etc.
+Phenome compiler will compile and process only files that match to Phenome component pattern - **default not named object export with at least `name` and `render` properties**.
+
+If you use any custom dependencies in Phenome components, e.g.:
+
+```jsx
+/* my-component.jsx */
+import Utils from './utils/utils.js';
+
+export default {
+  // ...
+}
+```
+
+make sure your `paths` pattern covers them. Compiler will not process them but it will copy them to output folder with paths respected.

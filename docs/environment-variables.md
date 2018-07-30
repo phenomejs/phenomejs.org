@@ -1,12 +1,12 @@
 ---
 id: 'environment-variables'
-title: Environment Variables
+title: Environment Variables & Constant Conditions
 ---
-# Environment Variables
+# Environment Variables & Constant Conditions
 
 In addition to [Conditional Comments](conditional-comments.html), environment variables (`process.env[var]`) passed to `env` compiler parameter can also be used to handle different conditions and for conditional rendering. Despite variables you passed, there is one more called `COMPILER` which will be automatically replaced with `vue` or `react` based on output.
 
-Event better, Phenome compiler is smart enough 💪 to parse simple "constant conditions" during compilation and remove the ones that become useless. Such conditions are pretty handy in situations where is not enough functionality of conditional comments .
+Event better, Phenome compiler is __smart enough__ 💪 to parse simple __"constant conditions"__ during compilation and remove the ones that become useless. Such conditions are pretty handy in situations where is not enough functionality of conditional comments .
 
 For example, let's say we use child component compiled also with Phenome, and we need to pass all attributes explicitly as child component props. Also we need some debugging information:
 
