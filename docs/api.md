@@ -88,7 +88,7 @@ if (process.env.FOO === true) {
       <td>react</td>
       <td>object</td>
       <td></td>
-      <td>Object with React compiler parameters:</td>
+      <td>Object with React compiler parameters. If not specified, then it will not compile React components.</td>
     </tr>
     <tr>
       <td>react.out</td>
@@ -130,7 +130,7 @@ if (process.env.FOO === true) {
       <td>vue</td>
       <td>object</td>
       <td></td>
-      <td>Object with Vue compiler parameters:</td>
+      <td>Object with Vue compiler parameters. If not specified, then it will not compile Vue components</td>
     </tr>
     <tr>
       <td>vue.env</td>

@@ -1,6 +1,6 @@
 module.exports = [
   {
-    title: 'Get Started',
+    title: 'Introduction',
     docs: [
       {
         id: 'installation',

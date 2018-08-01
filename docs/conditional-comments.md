@@ -8,13 +8,13 @@ Phenome tries to provide as much compatible API and same usage experience to get
 
 There are two conditional comments are supported
 
-```html
+```
 // phenome-[compiler]-line
 ```
 
 and
 
-```html
+```
 // phenome-[compiler]-next-line
 ```
 

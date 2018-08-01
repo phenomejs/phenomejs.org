@@ -17,8 +17,16 @@ extendLanguage('javascript');
 extendLanguage('jsx');
 
 function highlight(code, lang) {
-  if (lang === 'js') lang = 'javascript';
   if (!lang) return code;
+  if (lang === 'js') lang = 'javascript';
+  if (!Prism.languages[lang]) {
+    try {
+      loadLanguages([lang]);
+    } catch (e) {
+      // no such lang
+      console.log('error', lang);
+    }
+  }
   return Prism.highlight(code, Prism.languages[lang], lang)
 }
 
