@@ -10,6 +10,7 @@
 @codeBlue: #80A8FF;
 @codePurple: #C88FEC;
 @codePink: #FF506E;
+@codeGray: #B1CCD7;
 
 code {
   background: #fff5cc;
@@ -103,5 +104,12 @@ code {
       color: @codePurple;
     }
   }
-
+  &.language-css {
+    .selector {
+      color: @codeYellow;
+    }
+    .property {
+      color: @codeGray;
+    }
+  }
 }

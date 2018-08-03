@@ -8,6 +8,10 @@ title: Getting Started
 
 In this getting started guide we will setup project to start working with Phenome components, and compile them to Vue and React components.
 
+__TL;DR__
+
+This getting started project is available on GitHub as <a href="https://github.com/phenomejs/phenome-component-github-repos" target="_blank">Phenome GitHub Repos Component</a>. You can grab directly from there and start playing with it.
+
 ## Installation
 
 First of all, we need to create a project's folder, let's name it `/phenome-playground/` and create inside the following structure:
@@ -59,7 +63,7 @@ phenome-playground/
 
 ## Phenome Component
 
-Now we are ready to write our first Phenome component. For example, let's write a component that will display most popular GitHub repository for specified user or company account.
+Now we are ready to write our first [Phenome component](./component-declaration.html). For example, let's write a component that will display most popular GitHub repository for specified user or company account.
 
 Let's create `src/github-repos.jsx` file in our project:
 ```
@@ -104,7 +108,11 @@ export default {
       .then((repos) => {
         // Update component state with loaded repos
         self.setState({
-          repos: repos.slice(0, amount || 5)
+          repos: repos
+            // sort by stargazers count
+            .sort((a,b) => b.stargazers_count - a.stargazers_count)
+            // get specified amount
+            .slice(0, amount || 5)
         });
       });
   },
@@ -114,7 +122,6 @@ export default {
 
     return (
       <div className="github-repos">
-        {/* loop over repos */}
         {self.state.repos.map((repo) => (
           <div className="repo">
             <div className="repo-avatar">
@@ -134,10 +141,12 @@ export default {
           </div>
         ))}
       </div>
-    );
+    )
   },
 };
 ```
+
+You can learn more about [component declaration](./component-declaration.html), [life cycle methods](./life-cycle.html), [component props](./props.html), [state](./state.html) and [rendring with JSX](./rendering-jsx.html) in __Phenome Component__ documentation section.
 
 ## Compilation
 
@@ -166,11 +175,11 @@ phenome({
   // files with phenome components to process
   paths: './src/*.jsx',
   vue: {
-    // destination for compiled Vue components
+    /* destination for compiled Vue components */
     out: './dist/vue/',
   },
   react: {
-    // destination for compiled React components
+    /* destination for compiled React components */
     out: './dist/react/',
   },
 }).then(() => {
@@ -204,3 +213,99 @@ phenome-playground/
   compile.js
   package.json
 ```
+
+You can learn more about compiler API and all available parameters in [compiler API](./api.html)  documentation.
+
+
+## Styling
+
+Phenome doesn't support anything related to compiling and generating CSS stylesheets, except inline styles.
+
+So we will assume that our compiled component is used with the following styles (can be included separately):
+
+```css
+.github-repos .repo {
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 12px;
+}
+.github-repos .repo + .repo {
+  margin-top: 12px;
+}
+.github-repos .repo-avatar {
+  width: 96px;
+  height: 96px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.github-repos .repo-avatar img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.github-repos .repo-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+.github-repos .repo-name a {
+  font-weight: bold;
+  color: #000;
+}
+.github-repos .repo-stats {
+  list-style: none;
+  padding: 0;
+}
+.github-repos .repo-stats li + li {
+  margin-top: 5px;
+}
+.github-repos .repo-stats b {
+  font-size: 16px;
+  margin-right: 5px;
+}
+```
+
+## Result
+
+After successfull compilation we will be able to use compiled GitHub Repos component in React and Vue apps.
+
+For example we have some page component in React, so we can place our GitHub component inside like:
+
+```jsx
+// component from our dist/react/github-repos.js
+import GithubRepos from './path/to/github-repos.js'
+
+export () => (
+  <div className="page">
+    <GithubRepos username="framework7" amount={5} />
+  </div>
+)
+```
+
+And in Vue like so:
+
+```html
+<template>
+  <div class="page">
+    <github-repos username="framework7" :amount="5"></github-repos>
+  </div>
+</template>
+<script>
+  // component from our dist/vue/github-repos.js
+  import GithubRepos from './path/to/github-repos.js'
+
+  export default {
+    components: {
+      GithubRepos,
+    },
+  };
+</script>
+```
+
+As a result we should see something like (screenshot):
+
+<div class="get-started-screenshot">
+  <img src="/i/get-started-github-repos.png">
+</div>
