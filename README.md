@@ -3,6 +3,7 @@
 ## Install Dependencies
 
 ```
+cd website
 npm i
 ```
 
