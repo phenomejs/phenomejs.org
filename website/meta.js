@@ -1,7 +1,7 @@
 module.exports = {
   release: {
-    version: '0.0.20',
-    date: 'August 3, 2018'
+    version: '0.1.0',
+    date: 'August 31, 2018'
   },
   year: new Date().getFullYear(),
 };
