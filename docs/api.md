@@ -127,6 +127,14 @@ if (process.env.FOO === true) {
       </td>
     </tr>
     <tr>
+      <td>react.typeScriptDefinitions</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>
+        <p>Will generate TypeScript definitions for components when enabled</p>
+      </td>
+    </tr>
+    <tr>
       <td>vue</td>
       <td>object</td>
       <td></td>
